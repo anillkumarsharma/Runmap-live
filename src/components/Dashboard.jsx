@@ -10,7 +10,7 @@ export default function Dashboard({ stats }) {
     { label: 'Speed', value: stats.speed, unit: 'km/h', color: 'text-yellow-400' },
     { label: 'Pace', value: stats.pace, unit: 'min/km', color: 'text-purple-400' },
     { label: 'Calories', value: stats.calories, unit: 'kcal', color: 'text-orange-400' },
-    { label: 'Time', value: stats.timeStr, unit: '', color: 'text-pink-400' },
+    { label: 'Time', value: stats.timeStr, unit: '', color: 'text-pink-400', small: true },
   ];
 
   return (
@@ -18,7 +18,7 @@ export default function Dashboard({ stats }) {
       {cards.map((card) => (
         <div key={card.label} className="bg-gray-900 border border-gray-800 rounded-2xl p-4">
           <div className="text-xs text-gray-500 uppercase tracking-widest mb-1">{card.label}</div>
-          <div className={`text-2xl font-bold ${card.color}`}>{card.value}</div>
+          <div className={`font-bold ${card.color} ${card.small ? 'text-lg' : 'text-2xl'}`}>{card.value}</div>
           <div className="text-xs text-gray-600 mt-1">{card.unit}</div>
           {card.sub && <div className="text-xs text-gray-500 mt-1">{card.sub}</div>}
         </div>
