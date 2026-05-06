@@ -22,7 +22,7 @@ export function useGPS() {
 
   const startRun = useCallback(() => {
     if (!navigator.geolocation) {
-      setError('GPS aapke browser mein support nahi hai!');
+      setError('GPS is not supported in your browser!');
       return;
     }
 
@@ -94,7 +94,7 @@ export function useGPS() {
     // Save to localStorage
     const session = {
       id: Date.now(),
-      date: new Date().toLocaleDateString('hi-IN'),
+      date: new Date().toLocaleDateString('en-IN'),
       time: formatTime(secondsRef.current),
       distance: (stats.distance / 1000).toFixed(2),
       area: Math.round(stats.area),

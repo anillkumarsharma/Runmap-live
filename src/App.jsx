@@ -35,7 +35,7 @@ export default function App() {
 
       {lastSession && !isRunning && (
         <div className="bg-green-900/30 border border-green-700 rounded-2xl p-4 mb-4 text-sm text-green-300">
-          ✅ Run save ho gaya! <b>{lastSession.distance} km</b> — Area: <b>{parseInt(lastSession.area).toLocaleString()} m²</b>
+          ✅ Run saved! <b>{lastSession.distance} km</b> — Area: <b>{parseInt(lastSession.area).toLocaleString()} m²</b>
         </div>
       )}
 

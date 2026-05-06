@@ -11,7 +11,7 @@ export default function History() {
   if (sessions.length === 0) {
     return (
       <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center text-gray-500 text-sm">
-        Abhi tak koi run save nahi hua. Chalaao! 🏃
+        No runs saved yet. Start your first run! 🏃
       </div>
     );
   }
